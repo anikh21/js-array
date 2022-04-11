@@ -7,10 +7,12 @@ function lb(color = 'black', title, New = false) {
     );
   } else {
     if (New) {
+      console.log('');
       console.log(
         `%c************************* ${title} *************************`,
         `color:${color || 'green'};font-size: 20px`
       );
+      console.log('');
     } else {
       console.log(
         `%c************************* ${title} *************************`,
