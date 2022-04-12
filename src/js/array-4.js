@@ -3,7 +3,7 @@
    * @Title: Add New Elements
    */
 
-  // lb(false, 'Add New Elements', true);
+  lb(false, 'Add New Elements', true);
 
   // Use push method to insert element in end
   lb('red', 'Use push method to insert element in end');
