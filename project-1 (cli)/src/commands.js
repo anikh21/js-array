@@ -6,10 +6,10 @@ const FIND = 'find';
 const LIST = 'list';
 
 module.exports = {
-  ADD,
-  UPDATE,
-  DONE,
-  NEXT,
-  FIND,
-  LIST,
+    ADD,
+    UPDATE,
+    DONE,
+    NEXT,
+    FIND,
+    LIST,
 };
