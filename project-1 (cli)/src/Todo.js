@@ -40,8 +40,13 @@ class Todo {
         }
     }
 
-    done() {
-        return this.todoList.shift();
+    done(id = 1) {
+        if (id === 1) this.todoList.shift();
+        this.todoList.forEach((item, index) => {
+            if (item.id === id) {
+                this.todoList.splice(index, 1);
+            }
+        });
     }
 
     next() {

@@ -1,11 +1,24 @@
 const { argv } = require('yargs');
 const path = require('path');
+const fs = require('fs');
+
 const Todo = require('./Todo');
 const { readFile, saveFile } = require('./utils');
 const { ADD, UPDATE, DONE, NEXT, FIND, LIST } = require('./commands');
 
 const fileName = '../db/data.json';
 const filePath = path.resolve(__dirname, fileName);
+
+// console.log('--------------------------------');
+// console.log(filePath);
+// // fs.appendFile();
+
+// console.log('--------------------------------');
+// if (!filePath) {
+//     fs.mkdir(path.resolve(__dirname, '../db'), { recursive: true }, (err) => {
+//         if (err) throw err;
+//     });
+// }
 
 (function init() {
     const data = readFile(filePath) || [];
@@ -31,9 +44,9 @@ const filePath = path.resolve(__dirname, fileName);
             break;
 
         case DONE:
-            todo.done();
-            console.log('One Item Completed');
+            todo.done(argv.id);
             saveFile(todo.todoList, filePath);
+            console.log('One Item Completed');
             break;
 
         case FIND:
