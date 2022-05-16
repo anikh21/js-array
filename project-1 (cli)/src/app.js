@@ -4,7 +4,7 @@ const Todo = require('./Todo');
 const { readFile, saveFile } = require('./utils');
 const { ADD, UPDATE, DONE, NEXT, FIND, LIST } = require('./commands');
 
-const fileName = '../data.json';
+const fileName = '../db/data.json';
 const filePath = path.resolve(__dirname, fileName);
 
 (function init() {
